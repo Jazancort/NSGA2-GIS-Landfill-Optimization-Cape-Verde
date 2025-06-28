@@ -42,25 +42,6 @@ The map below visualizes the geographic distribution of the top-performing solut
 * 🟥 **High Security:** These three sites are farthest from population centers and high-risk zones like the aerodrome, maximizing social safety.
 * 🟧 **Best Compromise:** The site selected via weighted scoring. Interestingly, it shares the same spatial quadrant as one of the high-safety sites, highlighting its robust, balanced profile.
 
-## 📂 Repository Structure
-NSGA2-GIS-Landfill-Optimization-Cape-Verde/
-│
-├── data/
-│   ├── geologia_fogo.shp           # Shapefile for island geology and boundaries
-│   └── ...                         # Other geospatial data (DEMs, protected areas, etc.)
-│
-├── results/
-│   ├── map.jpg                     # Final map of optimal site allocations
-│   ├── parreto_plot.png            # 3D plot of the Pareto Front
-│   ├── work_flow.png               # Workflow diagram
-│   └── ...                         # Other plots and outputs
-│
-├── Areas-candidatas_e_criacao_de_mapas.ipynb  # Notebook to generate candidate areas and create maps with Folium.
-├── Pega_dados.ipynb                           # Notebook to extract, process, standardize, and run the NSGA-II optimization.
-├── Trabalho_final___Glauco___Julio_Azancort.pdf # The scientific paper detailing the study.
-└── README.md                                  # This file.
-
-
 ## 🚀 Getting Started
 
 To replicate this study, follow the steps below:
