@@ -67,6 +67,8 @@ To replicate this study, follow the steps below:
 
 ## 📄 Citation
 
+If you use this work in your research, please cite:
+
 @software{azancort_neto_2024,
   author = {Azancort Neto, Julio Leite},
   title = {NSGA2-GIS-Landfill-Optimization-Cape-Verde},
