@@ -67,10 +67,14 @@ To replicate this study, follow the steps below:
 
 ## 📄 Citation
 
-This work is based on the attached scientific paper. If you use this project in your research, please cite it appropriately.
-
-**Title:** *Multi-Objective Optimization for Landfill Site Allocation Using GIS and NSGA-II: A Case Study on Fogo Island, Cape Verde*
-**Author:** Julio Leite Azancort Neto
+@software{azancort_neto_2024,
+  author = {Azancort Neto, Julio Leite},
+  title = {NSGA2-GIS-Landfill-Optimization-Cape-Verde},
+  year = {2024},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/yourusername/NSGA2-GIS-Landfill-Optimization-Cape-Verde}}
+}
 
 ## 📜 License
 
