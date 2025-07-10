@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Methodology Workflow - 2 Columns</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    svg {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+    }
+    .node-rect {
+      stroke-width: 1.5;
+      stroke: #2d3142;
+      rx: 8;
+      ry: 8;
+      filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.1));
+    }
+    .node-text {
+      font-size: 14px;
+      font-weight: 500;
+      fill: #212529;
+      text-anchor: middle;
+      pointer-events: none;
+      user-select: none;
+    }
+    .node-text-light {
+      fill: white;
+      font-weight: 600;
+    }
+    .arrow-line {
+      stroke: #4f5d75;
+      stroke-width: 2;
+      fill: none;
+    }
+    .phase-title {
+      font-size: 18px;
+      font-weight: bold;
+      text-anchor: middle;
+      fill: #003049;
+    }
+    .color-phase1 { fill: #caf0f8; }
+    .color-phase2 { fill: #90e0ef; }
+    .color-phase3 { fill: #48cae4; }
+    .color-phase4 { fill: #00b4d8; }
+    .color-start { fill: #0077b6; }
+    .color-end { fill: #023e8a; }
+    .color-data { fill: #f8f9fa; stroke-dasharray: 5 3; }
+  </style>
+</head>
+<body>
+  <svg viewBox="0 0 1200 950" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6"
+        refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+        <polygon points="0 0, 8 3, 0 6" fill="#4f5d75" />
+      </marker>
+    </defs>
+
+    <!-- Titles -->
+    <text x="300" y="40" class="phase-title">1. Data Input & Candidate Generation</text>
+    <text x="300" y="500" class="phase-title">2. Criteria Analysis</text>
+    <text x="900" y="40" class="phase-title">3. Multi-Objective Optimization</text>
+    <text x="900" y="500" class="phase-title">4. Decision Making</text>
+
+    <!-- Column 1: Fase 1 -->
+    <g transform="translate(220,80)">
+      <rect class="node-rect color-start" width="150" height="70"/>
+      <text class="node-text node-text-light" x="75" y="40">Input Data</text>
+    </g>
+    <g transform="translate(220,190)">
+      <rect class="node-rect color-phase1" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Generate 1km²</text>
+      <text class="node-text" x="75" y="48">Grid of Areas</text>
+    </g>
+    <g transform="translate(220,300)">
+      <rect class="node-rect color-phase1" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Select 524 Areas</text>
+      <text class="node-text" x="75" y="48">Intersecting Island</text>
+    </g>
+    <g transform="translate(220,410)">
+      <rect class="node-rect color-phase1" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Calculate Centroid</text>
+      <text class="node-text" x="75" y="48">for each Area</text>
+    </g>
+    <g transform="translate(220,520)">
+      <rect class="node-rect color-data" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">524 Candidate</text>
+      <text class="node-text" x="75" y="48">Points (lat, lon)</text>
+    </g>
+
+    <!-- Column 1: Fase 2 -->
+    <g transform="translate(220,630)">
+      <rect class="node-rect color-phase2" width="160" height="70"/>
+      <text class="node-text" x="80" y="40">Loop through</text>
+    </g>
+    <g transform="translate(220,740)">
+      <rect class="node-rect color-phase2" width="160" height="70"/>
+      <text class="node-text" x="80" y="40">Criteria Calculation</text>
+    </g>
+    <g transform="translate(90,850)">
+      <rect class="node-rect color-phase2" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Raster Analysis</text>
+      <text class="node-text" x="75" y="48">(Slope, Aspect)</text>
+    </g>
+    <g transform="translate(350,850)">
+      <rect class="node-rect color-phase2" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Vector Analysis</text>
+      <text class="node-text" x="75" y="48">(Distances)</text>
+    </g>
+    <g transform="translate(220,960)">
+      <rect class="node-rect color-phase2" width="160" height="70"/>
+      <text class="node-text" x="80" y="32">OSM Analysis</text>
+      <text class="node-text" x="80" y="48">(Distances)</text>
+    </g>
+    <g transform="translate(220,1070)">
+      <rect class="node-rect color-data" width="160" height="70"/>
+      <text class="node-text" x="80" y="32">Raw Criteria</text>
+      <text class="node-text" x="80" y="48">DataFrame</text>
+    </g>
+    <g transform="translate(220,1180)">
+      <rect class="node-rect color-end" width="160" height="70"/>
+      <text class="node-text node-text-light" x="80" y="32">Save to</text>
+      <text class="node-text node-text-light" x="80" y="48">criteria_data.csv</text>
+    </g>
+
+    <!-- Column 2: Fase 3 -->
+    <g transform="translate(820,80)">
+      <rect class="node-rect color-phase3" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Define Objective</text>
+      <text class="node-text" x="75" y="48">Functions</text>
+    </g>
+    <g transform="translate(820,190)">
+      <rect class="node-rect color-phase3" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Run NSGA-II</text>
+      <text class="node-text" x="75" y="48">Algorithm</text>
+    </g>
+    <g transform="translate(820,300)">
+      <rect class="node-rect color-data" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Pareto Front</text>
+      <text class="node-text" x="75" y="48">(14 Optimal Solutions)</text>
+    </g>
+
+    <!-- Column 2: Fase 4 -->
+    <g transform="translate(820,480)">
+      <rect class="node-rect color-phase4" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Analyze Extreme</text>
+      <text class="node-text" x="75" y="48">Solutions</text>
+    </g>
+    <g transform="translate(820,590)">
+      <rect class="node-rect color-phase4" width="150" height="70"/>
+      <text class="node-text" x="75" y="32">Select Best</text>
+      <text class="node-text" x="75" y="48">Compromise</text>
+    </g>
+    <g transform="translate(820,700)">
+      <rect class="node-rect color-end" width="150" height="70"/>
+      <text class="node-text node-text-light" x="75" y="40">Final Report</text>
+    </g>
+
+    <!-- Connections -->
+    <!-- Exemplo de ligações, ajuste conforme necessário -->
+    <path d="M 295 150 V 185" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 295 260 V 295" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 295 370 V 405" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 295 480 V 515" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 295 600 V 635" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <!-- Continue com suas outras ligações -->
+
+    <!-- Inter-column connections -->
+    <path d="M 370 1180 C 500 1180, 500 115, 820 115" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 895 370 V 445" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 895 550 V 585" class="arrow-line" marker-end="url(#arrowhead)"/>
+    <path d="M 895 660 V 695" class="arrow-line" marker-end="url(#arrowhead)"/>
+  </svg>
+</body>
+</html>
