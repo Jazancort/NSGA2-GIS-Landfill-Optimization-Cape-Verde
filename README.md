@@ -23,6 +23,10 @@
 
 ---
 
+### ⚙️ Workflow
+
+![Work flow](img/work_flow-2.png)
+
 ### 📂 Repository Structure
 
 ### Pareto Front
