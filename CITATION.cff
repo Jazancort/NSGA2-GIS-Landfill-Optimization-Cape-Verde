@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "NSGA-II GIS Landfill Optimization for Ilha do Fogo, Cabo Verde"
+authors:
+  - family-names: "Azancort Neto"
+    given-names: "Julio Leite"
+    orcid: "https://orcid.org/0000-0003-2866-5445"
+    affiliation: "Institute of Technology, Federal University of Pará (UFPA)"
+repository-code: "https://github.com/Jazancort/NSGA2-GIS-Landfill-Optimization-Cape-Verde"
+doi: 10.5281/zenodo.17704387
+license: Apache-2.0
+keywords:
+  - nsga-ii
+  - multi-objective optimization
+  - landfill site selection
+  - gis
+  - ahp
+  - cape verde
